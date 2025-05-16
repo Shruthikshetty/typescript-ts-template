@@ -102,21 +102,4 @@ add script
 "test": "jest"
 ```
 
-now run the script
-
-### add prettier
-
-```bash
-npm i -D prettier
-```
-
-add .prettierrc file if required to change any default configs
-```ts
-{
-  "semi": true,
-  "singleQuote": true,
-  "printWidth": 80,
-  "tabWidth": 2,
-  "trailingComma": "es5"
-}
-```
+now run the script 

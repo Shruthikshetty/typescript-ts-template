@@ -1,25 +1,22 @@
 // main starting point
-import express, { Request, Response } from 'express';
-import dotenv from 'dotenv';
-
-// configure .env
-dotenv.config();
+import express, { Request, Response } from "express";
 const app = express();
+const port = 3000;
 
 // Middleware for parsing JSON request bodies
 app.use(express.json());
 
 // Example Route
-app.get('/', (req, res: Response) => {
-  res.send('Hello TypeScript with Express! Enjoy');
+app.get("/", (req: Request, res: Response) => {
+  res.send("Hello TypeScript with Express! Enjoy");
 });
 export const getExample = (req: Request, res: Response) => {
-  res.json({ message: 'This is a sample endpoint' });
+  res.json({ message: "This is a sample endpoint" });
 };
 // Example Route to test a controller
-app.get('/example', getExample);
+app.get("/example", getExample);
 
 // Start the server
-export default app.listen(process.env.PORT, () => {
-  console.log(`Server running at http://localhost:${process.env.PORT}`);
+export default app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });
