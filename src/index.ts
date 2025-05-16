@@ -10,10 +10,10 @@ const app = express();
 app.use(express.json());
 
 // Example Route
-app.get('/', (req, res: Response) => {
+app.get('/', (_, res: Response) => {
   res.send('Hello TypeScript with Express! Enjoy');
 });
-export const getExample = (req: Request, res: Response) => {
+export const getExample = (_: Request, res: Response) => {
   res.json({ message: 'This is a sample endpoint' });
 };
 // Example Route to test a controller
